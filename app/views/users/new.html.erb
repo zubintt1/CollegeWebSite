@@ -1,0 +1,43 @@
+<!--
+<h2>Sign up</h2>
+-->
+<%= form_for @user do |f| %>
+  <% if @user.errors.any? %>
+    <div>
+      <h2>Form is invalid</h2>
+      <ul>
+        <% for message in @user.errors.full_messages %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+  </div>
+  <% end %>
+  <div style="text-align:center;"><%= f.label :First_Name %><br />
+  <%= f.text_field :user_first_name, :autofocus => true %></div>
+
+  <div style="text-align:center;"><%= f.label :Last_Name %><br />
+  <%= f.text_field :user_last_name, :autofocus => true %></div>
+
+  <div style="text-align:center;"><%= f.label :RollNumber %><br />
+  <%= f.text_field :user_rollnumber, :autofocus => true %></div>
+
+  <div style="text-align:center;"><%= f.label :User_Name %><br />
+  <%= f.text_field :user_username, :autofocus => true %></div>
+
+  <div style="text-align:center;"><%= f.label :email %><br />
+  <%= f.email_field :user_email, :autofocus => true %></div>
+
+  <div style="text-align:center;"><%= f.label :User_Security_Question %><br />
+  <%= f.text_field :user_security_question, :autofocus => true %></div>
+
+  <div style="text-align:center;"><%= f.label :User_Security_Answer %><br />
+  <%= f.text_field :user_security_answer, :autofocus => true %></div>
+
+  <div style="text-align:center;"><%= f.label :password %><br />
+  <%= f.password_field :user_password %></div>
+
+  <div style="text-align:center;"><%= f.label :password_confirmation %><br />
+  <%= f.password_field :password_confirmation %></div>
+
+  <div style="text-align:center;"><%= f.submit "Sign up"%></div>
+<% end %>
