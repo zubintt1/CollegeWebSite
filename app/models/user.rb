@@ -4,9 +4,8 @@ class User < ActiveRecord::Base
 
 	VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 
-	validates(:user_password, presence: true)
-	validates(:user_email, presence: true, uniqueness: true, format: { with: VALID_EMAIL_REGEX }
-)
+	validates(:user_password, presence: true, confirmation: true)
+	validates(:user_email, presence: true, uniqueness: true, format: { with: VALID_EMAIL_REGEX })
 	validates(:user_security_question, presence: true)
 	validates(:user_security_answer, presence: true)
 	validates(:user_first_name, presence: true)
@@ -17,7 +16,7 @@ class User < ActiveRecord::Base
 	def encrypt_password
 		if user_password.present?
 			self.user_password_salt = BCrypt::Engine.generate_salt
-			self.user_password_hash = BCrypt::Engine.hash_secret(password, user_password_salt)
+			self.user_password_hash = BCrypt::Engine.hash_secret(user_password, user_password_salt)
 		end
 	end
 end
