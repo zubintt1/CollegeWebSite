@@ -1,6 +1,12 @@
 CollegeWebSite::Application.routes.draw do
+  get "session/new"
+  get "welcome/new"
+  get "users/new"
   get "sign_up" => "users#new", :as => "sign_up"
+  root "welcome#new"
   resources :users
+  resources :welcome
+  resources :session
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
