@@ -1,16 +1,16 @@
-<%= form_tag(new_session_path) do %>
+<%= form_for new_session_path, url: {action: "new"} do |f| %>
 
   <div style="text-align:center;"><%= label_tag :User_Name %><br />
-  <%= text_field_tag :user_username %></div>
+  <%= f.text_field :user_username %></div>
 
   <div style="text-align:center;"><%= label_tag :RollNumber %><br />
-  <%= text_field_tag :user_rollnumber %></div>
+  <%= f.text_field :user_rollnumber %></div>
 
   <div style="text-align:center;"><%= label_tag :email %><br />
-  <%= email_field_tag :user_email %></div>
+  <%= f.email_field :user_email %></div>
 
   <div style="text-align:center;"><%= label_tag :password %><br />
-  <%= password_field_tag :user_password %></div>
+  <%= f.password_field :user_password %></div>
 
-  <div type="button" style="color:#6A1975;padding:4%;text-align:center;"><%= submit_tag "Sign in" %></div>
+  <div type="button" style="color:#6A1975;padding:4%;text-align:center;"><%= f.submit "Sign in" %></div>
 <% end %>

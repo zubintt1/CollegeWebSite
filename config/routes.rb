@@ -7,9 +7,9 @@ CollegeWebSite::Application.routes.draw do
   resources :welcome
   resources :session, only: [:new, :create, :destroy]
 
-  match '/user_login', to: 'session#new', via:'get'
-  match '/user_signout', to: 'session#destroy', via: 'delete'
-  match '/user_signup', to: 'users#new', via: 'get'
+  match 'user_login', to: 'session#new', via:'get'
+  match 'user_logout', to: 'session#destroy', via: 'delete'
+  match 'user_signup', to: 'users#new', via: 'get'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
