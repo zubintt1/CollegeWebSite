@@ -1,6 +1,7 @@
 CollegeWebSite::Application.routes.draw do
-  get "sign_up" => "users#new", :as => "sign_up"
+  get "user_signup" => "users#new", :as => "sign_up"
   get "user_login" => "session#new", :as => "user_login"
+  get "user_logout" => "session#destroy", :as => "user_logout"
   root "welcome#new"
   resources :users
   resources :welcome
