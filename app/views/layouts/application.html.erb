@@ -13,7 +13,7 @@
 <body style="background-color:#000000; font-family:cursive,Zapf-Chancery, arial, heveltica">
   <div class="responsive" style="text-align:center;">
     <table class="table" style="padding-top:3%;padding-left:14%;border-spacing:100% 100%;">
-      <td><button style="color:#6A1975;padding:4%;">User Login</button></td>
+      <td><%= link_to '<button type="button" style="color:#6A1975;">User Login</button>'.html_safe, new_session_path %></td>
       <td><button style="color:#6A1975;padding:4%;">Faculty</button></td>
       <td><button style="color:#6A1975;padding:4%;">Events</button></td>
       <td><button style="color:#6A1975;padding:4%;">Resources</button></td>
@@ -26,6 +26,10 @@
       <td><button style="color:#6A1975;padding:4%;">Disclaimer</button></td>
     </table>
   </div>
+  <% flash.each do |name, msg| %>
+    <%= content_tag :div, msg, :id => "flash_#{name}" %>
+  <% end %>
+
 
 <%= yield %>
 

@@ -13,6 +13,15 @@ class User < ActiveRecord::Base
 	validates(:user_username, presence: true, uniqueness: true)
 	validates(:user_rollnumber, presence: true, uniqueness: true)
 
+	def self.authenticate(user_username, user_rollnumber, user_email, user_password)
+		user = find_by(user_username,user_rollnumber,user_email)
+		if user && user.user_password_hash == BCrypt::Engine.hash_secret(user_password, user_password_salt)
+			user
+		else
+			nil
+		end
+	end
+
 	def encrypt_password
 		if user_password.present?
 			self.user_password_salt = BCrypt::Engine.generate_salt
