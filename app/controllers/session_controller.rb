@@ -15,7 +15,7 @@ class SessionController < ApplicationController
   end
 
   def user_login_params
-  	params.require(:user).permit(:user_username, :user_rollnumber, :user_email, :user_password)
+  	params.require(:user).permit(:user_username, :user_rollnumber, :user_email, :user_password, :user_password_hash)
   end
 
   def destroy
