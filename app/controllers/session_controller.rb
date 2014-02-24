@@ -1,6 +1,5 @@
 class SessionController < ApplicationController
   def new
-
   end
 
   def create
@@ -15,7 +14,7 @@ class SessionController < ApplicationController
   end
 
   def user_login_params
-  	params.require(:user).permit(:user_username, :user_rollnumber, :user_email, :user_password, :user_first_name)
+  	params.require(:user).permit(:user_username, :user_rollnumber, :user_email, :user_password)
   end
 
   def destroy
