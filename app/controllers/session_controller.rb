@@ -1,6 +1,5 @@
 class SessionController < ApplicationController
   def new
-
   end
 
   def create
@@ -17,6 +16,7 @@ class SessionController < ApplicationController
   def user_login_params
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   	params.require(:user).permit(:user_username, :user_rollnumber, :user_email, :user_password, :user_first_name)
 =======
   	params.require(:user).permit(:user_username, :user_rollnumber, :user_email, :user_password)
@@ -24,6 +24,9 @@ class SessionController < ApplicationController
 =======
   	params.require(:user).permit(:user_username, :user_rollnumber, :user_email, :user_password, :user_password_hash)
 >>>>>>> parent of 9714233... Everything's okay
+=======
+  	params.require(:user).permit(:user_username, :user_rollnumber, :user_email, :user_password)
+>>>>>>> 7c7b9b954e98cd34d3592aa93ab4d2bff1861da9
   end
 
   def destroy

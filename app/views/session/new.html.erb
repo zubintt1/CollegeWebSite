@@ -1,4 +1,6 @@
-<%= form_for new_session_path, url: {action: "new"} do |f| %>
+<%= form_for :session, url: session_path, action: "new") do |f| %>
+
+<div style="text-align:center;"><h3>Please fill out the following form to register</h3></div>
 
   <div style="text-align:center;"><%= label_tag :User_Name %><br />
   <%= f.text_field :user_username %></div>
@@ -12,5 +14,5 @@
   <div style="text-align:center;"><%= label_tag :password %><br />
   <%= f.password_field :user_password %></div>
 
-  <div type="button" style="color:#6A1975;padding:4%;text-align:center;"><%= f.submit "Sign in" %></div>
+  <div type="button" style="padding:4%;text-align:center;"><%= f.submit "Sign in" ,:style => 'color:#6A1975;' %></div>
 <% end %>
