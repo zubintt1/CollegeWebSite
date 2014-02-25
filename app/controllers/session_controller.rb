@@ -15,7 +15,11 @@ class SessionController < ApplicationController
   end
 
   def user_login_params
+<<<<<<< HEAD
   	params.require(:user).permit(:user_username, :user_rollnumber, :user_email, :user_password, :user_first_name)
+=======
+  	params.require(:user).permit(:user_username, :user_rollnumber, :user_email, :user_password)
+>>>>>>> parent of 549d757... Minor Changes
   end
 
   def destroy
