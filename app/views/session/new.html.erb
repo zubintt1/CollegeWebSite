@@ -1,0 +1,18 @@
+<%= form_for :session,  url: {action: "new"} do |f| %>
+
+<div style="text-align:center;"><h3>Please fill out the following form to Log In</h3></div>
+
+  <div style="text-align:center;"><%= label_tag :User_Name %><br />
+  <%= f.text_field :user_username %></div>
+
+  <div style="text-align:center;"><%= label_tag :RollNumber %><br />
+  <%= f.text_field :user_rollnumber %></div>
+
+  <div style="text-align:center;"><%= label_tag :email %><br />
+  <%= f.email_field :user_email %></div>
+
+  <div style="text-align:center;"><%= label_tag :password %><br />
+  <%= f.password_field :user_password %></div>
+
+  <div type="button" style="padding:4%;text-align:center;"><%= f.submit "Sign in" ,:style => 'color:#6A1975;' %></div>
+<% end %>
