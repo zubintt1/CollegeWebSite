@@ -1,4 +1,8 @@
 CollegeWebSite::Application.routes.draw do
+  get "admin/index"
+  get "sessions/new"
+  get "sessions/create"
+  get "sessions/destroy"
   get "user_signup" => "users#new", :as => "sign_up"
   root "welcome#new"
   resources :users
