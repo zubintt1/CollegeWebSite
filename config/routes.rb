@@ -1,14 +1,9 @@
 CollegeWebSite::Application.routes.draw do
   get "user_signup" => "users#new", :as => "sign_up"
-  get "user_login" => "session#new", :as => "user_login"
-  get "user_logout" => "session#destroy", :as => "user_logout"
   root "welcome#new"
   resources :users
   resources :welcome
-  resources :session, only: [:new, :create, :destroy]
 
-  match '/user_login', to: 'session#new', via:'get'
-  match '/user_logout', to: 'session#destroy', via: 'delete'
   match '/user_signup', to: 'users#new', via: 'get'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
