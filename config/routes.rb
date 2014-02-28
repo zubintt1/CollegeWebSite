@@ -1,5 +1,5 @@
 CollegeWebSite::Application.routes.draw do
-  get "admin/index"
+  get 'admin' => 'admin#index'
   get "sessions/new"
   get "sessions/create"
   get "sessions/destroy"
@@ -7,6 +7,12 @@ CollegeWebSite::Application.routes.draw do
   root "welcome#new"
   resources :users
   resources :welcome
+
+  controller :sessions do
+    get 'login' => :new
+    post 'login' => :create
+    delete 'logout' => :destroy
+  end
 
   match '/user_signup', to: 'users#new', via: 'get'
   # The priority is based upon order of creation: first created -> highest priority.

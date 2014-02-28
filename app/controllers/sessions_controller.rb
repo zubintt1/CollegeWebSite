@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
   end
 
   def create
-  	user = User.find_by(username: params[:username])
+  	user = User.find_by(username: params[:username], rollnumber: params[:rollnumber])
   	if user and user.authenticate(params[:password])
   		session[:user_id] = user.id
   		redirect_to admin_url
@@ -13,5 +13,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
+  	session[:user_id] = nil
+	redirect_to store_url, notice: "Logged out"
   end
 end

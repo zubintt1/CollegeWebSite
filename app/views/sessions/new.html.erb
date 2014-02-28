@@ -2,12 +2,21 @@
 	<% if flash[:alert] %>
 		<p id="notice"><% flash[:alert] %></p>
 	<% end %>
-	<%= form_tag do %>
+	<%= form_tag(controller: "sessions", action: "new", method: "get") do %>
 	<fieldset>
 		<legend>Plese fill out to log in</legend>
 		<div>
 			<%= label_tag :username, 'Username:' %>
 			<%= text_field_tag :username, params[:username] %>
 		</div>
+		<div>
+			<%= label_tag :rollnumber, 'RollNumber:' %>
+			<%= text_field_tag :rollnumber, params[:rollnumber] %>
+		</div>
+		<div>
+			<%= label_tag :password, 'Password:' %>
+			<%= password_field_tag :password, params[:password] %>
+		</div>
 	</fieldset>
+	<% end %>
 </div>
