@@ -15,6 +15,7 @@ CollegeWebSite::Application.routes.draw do
   end
 
   match '/user_signup', to: 'users#new', via: 'get'
+  match '/user_login', to: 'sessions#new', via: 'get'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
