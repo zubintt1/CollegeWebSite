@@ -3,19 +3,22 @@
 		<p id="notice"><% flash[:alert] %></p>
 	<% end %>
 	<%= form_tag(controller: "sessions", action: "new", method: "get") do %>
-	<fieldset>
-		<legend>Plese fill out to log in</legend>
+	<fieldset style="text-align:center;color:#D6D930;">
+		<legend style="color:#D6D930;">Plese fill out to log in</legend>
 		<div>
-			<%= label_tag :username, 'Username:' %>
+			<%= label_tag :username, 'Username:' %><br>
 			<%= text_field_tag :username, params[:username] %>
 		</div>
 		<div>
-			<%= label_tag :rollnumber, 'RollNumber:' %>
+			<%= label_tag :rollnumber, 'RollNumber:' %><br>
 			<%= text_field_tag :rollnumber, params[:rollnumber] %>
 		</div>
 		<div>
-			<%= label_tag :password, 'Password:' %>
+			<%= label_tag :password, 'Password:' %><br>
 			<%= password_field_tag :password, params[:password] %>
+		</div>
+		<div>
+			<%= submit_tag "Login" %>
 		</div>
 	</fieldset>
 	<% end %>
