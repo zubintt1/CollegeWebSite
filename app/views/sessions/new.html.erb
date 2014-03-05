@@ -20,6 +20,12 @@
 		<div>
 			<%= submit_tag "Login", style: "color:#6A1975;"%>
 		</div>
+		<div>
+			<h4>Not Registered yet? Then Sign up</h4>
+		</div>
+		<div>
+			<%= link_to '<button type="button" style="color:#6A1975;">Sign Up</button>'.html_safe, new_user_path %>
+		</div>
 	</fieldset>
 	<% end %>
 </div>
