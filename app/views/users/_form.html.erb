@@ -1,0 +1,55 @@
+<%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<fieldset>
+<legend style="text-align:center;color:#D6D930;">Fill out the following form to register</legend>
+  <div class="field" style="text-align:center;color:#D6D930;">
+    <%= f.label :first_name %><br>
+    <%= f.text_field :first_name %>
+  </div>
+  <div class="field" style="text-align:center;color:#D6D930;">
+    <%= f.label :last_name %><br>
+    <%= f.text_field :last_name %>
+  </div>
+  <div class="field" style="text-align:center;color:#D6D930;">
+    <%= f.label :username %><br>
+    <%= f.text_field :username %>
+  </div>
+  <div class="field" style="text-align:center;color:#D6D930;">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field" style="text-align:center;color:#D6D930;">
+    <%= f.label :rollnumber %><br>
+    <%= f.number_field :rollnumber %>
+  </div>
+  <div class="field" style="text-align:center;color:#D6D930;">
+    <%= f.label :security_question %><br>
+    <%= f.text_field :security_question %>
+  </div>
+  <div class="field" style="text-align:center;color:#D6D930;">
+    <%= f.label :security_answer %><br>
+    <%= f.text_field :security_answer %>
+  </div>
+  <div class="field" style="text-align:center;color:#D6D930;">
+    <%= f.label :password %><br>
+    <%= f.password_field :password %>
+  </div>
+  <div style="text-align:center;color:#D6D930;">
+    <%= f.label :password_confirmation %><br>
+    <%= f.password_field :password_confirmation %>
+  </div>
+  <div class="actions" style="text-align:center;">
+    <%= f.submit "Sign Up", style: "color:#6A1975;"%>
+  </div>
+  </fieldset>
+<% end %>

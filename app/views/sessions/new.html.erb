@@ -1,0 +1,31 @@
+<div class="depot_form">
+	<% if flash[:alert] %>
+		<p id="notice"><% flash[:alert] %></p>
+	<% end %>
+	<%= form_tag('/login') do %>
+	<fieldset style="text-align:center;color:#D6D930;">
+		<legend style="color:#D6D930;">Plese fill out to log in</legend>
+		<div>
+			<%= label_tag :username, 'Username:' %><br>
+			<%= text_field_tag :username, params[:username] %>
+		</div>
+		<div>
+			<%= label_tag :rollnumber, 'RollNumber:' %><br>
+			<%= text_field_tag :rollnumber, params[:rollnumber] %>
+		</div>
+		<div>
+			<%= label_tag :password, 'Password:' %><br>
+			<%= password_field_tag :password, params[:password] %>
+		</div>
+		<div>
+			<%= submit_tag "Login", style: "color:#6A1975;"%>
+		</div>
+		<div>
+			<h4>Not Registered yet? Then Sign up</h4>
+		</div>
+		<div>
+			<%= link_to '<button type="button" style="color:#6A1975;">Sign Up</button>'.html_safe, new_user_path %>
+		</div>
+	</fieldset>
+	<% end %>
+</div>

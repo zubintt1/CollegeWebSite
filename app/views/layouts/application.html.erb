@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CollegeWebSite</title> 
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+  <head>
+  <h1 style="text-align:center; color:blue; font-family:arial, helvetica, sans-serif; font-style: italic;">Department of Electronics and Communication,GEU</h1>  
+  </head>
+</head>
+<body class="responsive" style="background-color:#000000; font-family:cursive,Zapf-Chancery, arial, heveltica">
+  <div class="btn-group-vertical" style="text-align:center;float:left;padding-top:5%;">
+      <table class="btn-group-vertical" cellpadding="10" style="float:left;">
+      <tr>
+        <td>
+          <%= link_to '<button type="button" style="color:#6A1975;float:right;">User Login</button>'.html_safe, login_path %></td>
+        </tr>
+        <tr>
+          <td><button style="color:#6A1975;">Faculty</button></td>
+        </tr>
+        <tr>
+          <td>
+            <button style="color:#6A1975;">Events</button>        
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button style="color:#6A1975;">Resources</button>    
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button style="color:#6A1975;">Timetables</button>    
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button style="color:#6A1975;">Syllabus</button>    
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button style="color:#6A1975;">Notices</button>      
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button style="color:#6A1975;">Students</button>    
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button style="color:#6A1975;">Exam Notices</button>  
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button style="color:#6A1975;">Hotpots</button>    
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button style="color:#6A1975;">Disclaimer</button>    
+          </td>
+        </tr>    
+      </table>
+  </div>
+  <% flash.each do |name, msg| %>
+    <%= content_tag :div, msg, :id => "flash_#{name}" %>
+  <% end %>
+
+
+<%= yield %>
+
+</body>
+</html>
