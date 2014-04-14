@@ -26,6 +26,10 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 0.3.37)
     arel (4.0.2)
+<<<<<<< HEAD
+=======
+    atomic (1.1.15)
+>>>>>>> d4a395ee06e0d81e488cedaa643095d5c5233830
     bcrypt (3.1.7)
     bcrypt-ruby (3.1.5)
       bcrypt (>= 3.1.3)
@@ -57,7 +61,11 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.25.1)
     minitest (4.7.5)
+<<<<<<< HEAD
     multi_json (1.9.2)
+=======
+    multi_json (1.8.4)
+>>>>>>> d4a395ee06e0d81e488cedaa643095d5c5233830
     pg (0.17.1)
     polyglot (0.3.4)
     rack (1.5.2)
@@ -76,6 +84,7 @@ GEM
       activesupport (= 4.0.2)
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
+<<<<<<< HEAD
     rake (10.2.2)
     rdoc (4.1.1)
       json (~> 1.4)
@@ -86,6 +95,17 @@ GEM
       sass (~> 3.2.0)
       sprockets (~> 2.8, <= 2.11.0)
       sprockets-rails (~> 2.0)
+=======
+    rake (10.1.1)
+    rdoc (4.1.1)
+      json (~> 1.4)
+    ref (1.0.5)
+    sass (3.2.14)
+    sass-rails (4.0.1)
+      railties (>= 4.0.0, < 5.0)
+      sass (>= 3.1.10)
+      sprockets-rails (~> 2.0.0)
+>>>>>>> d4a395ee06e0d81e488cedaa643095d5c5233830
     sdoc (0.4.0)
       json (~> 1.8)
       rdoc (~> 4.0, < 5.0)
@@ -102,16 +122,29 @@ GEM
     therubyracer (0.12.1)
       libv8 (~> 3.16.14.0)
       ref
+<<<<<<< HEAD
     thor (0.19.1)
     thread_safe (0.3.3)
+=======
+    thor (0.18.1)
+    thread_safe (0.2.0)
+      atomic (>= 1.1.7, < 2)
+>>>>>>> d4a395ee06e0d81e488cedaa643095d5c5233830
     tilt (1.4.1)
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
+<<<<<<< HEAD
     turbolinks (2.2.2)
       coffee-rails
     tzinfo (0.3.39)
     uglifier (2.5.0)
+=======
+    turbolinks (2.2.1)
+      coffee-rails
+    tzinfo (0.3.38)
+    uglifier (2.4.0)
+>>>>>>> d4a395ee06e0d81e488cedaa643095d5c5233830
       execjs (>= 0.3.0)
       json (>= 1.8.0)
 
