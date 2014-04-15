@@ -1,4 +1,5 @@
 CollegeWebSite::Application.routes.draw do
+  get "user_profile/create"
   get 'admin' => 'admin#index'
   get "sessions/new"
   get "sessions/create"
